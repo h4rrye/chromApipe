@@ -14,6 +14,16 @@ GSE105544_ENCFF010WBP, 500kb resolution, **3DMax** consistently shows the highes
 
 I saved the PDB files as github release assets do they dont live in the repo and take up space. This data can be directly accessed via the download url.
 
+____
+
+use this to view parquet files in the terminal
+
+`parquet-tools show data/chr21_compiled.parquet --head 5`
+
+____
+
+> we are not organizing the files in the `data/` directory as these files are only there to test out the python scripts. Once we run the NextFlow pipeline, it takes care of its own files, hence it will be good idea to even add the data/ to `.gitignore`.
+
 ___
 
 ## STACK
