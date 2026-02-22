@@ -2,6 +2,7 @@
 takes the outputs from the annotation & physical
 scripts and merges them into one parquet per chromosome
 """
+
 import argparse
 import polars as pl
 import os
@@ -72,7 +73,7 @@ surface = pl.read_csv(
 )
 
 
-#------ mergeing the files---------------
+#------ merging the files---------------
 # using one-to-one mapping as the beads align
 merged = pl.concat(
     [physical, annotations.drop(["bead", "chr"])], 

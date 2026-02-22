@@ -1,3 +1,12 @@
+"""
+this script computes physical attribtues & network
+properties of the physical 3D model of the chromosome
+taking the respective PDB file as input. There are 
+more additions coming to this script where we will use
+networkx to process this structrure as a connected
+graph and study various network properties.
+"""
+
 import argparse
 import mdtraj as md
 import numpy as np

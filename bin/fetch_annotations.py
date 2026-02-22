@@ -1,3 +1,10 @@
+"""
+This script fetches the genome annotations via REST API
+from ESEMBL, then maps it to the 3D structure. There are more
+additions coming to this script and can fetch magnitude of 
+biological data for the corresponding chromosome.
+"""
+
 import argparse
 import requests
 import pandas as pd

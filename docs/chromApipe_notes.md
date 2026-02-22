@@ -26,6 +26,29 @@ ____
 
 ___
 
+### NextFlow
+
+<b> Functioning</b>
+
+<span style='Color:red;'>Processes, Channels, Workflows</span>
+
+Think of it as a network.
+
+- <b>Process</b> : are the individual tasks, like every single python script is an individual task. This corresponds to nodes in the network
+- <b>Channels</b>: is how data flows thorough the processes, output of one script goes into a channel which serves as input to another channel. Think of this as the edges between the nodes
+- <b>Workflow</b>: think of it as wiring a network. You tell which channel will connect to which process and how these processes are linked/arranged or flow.
+
+`val chr_num` : use this in **input** as we are declaring it as numeric
+
+`val(chr_num)` : use this in **output** as this is referencing an exisiting variable
+
+`--outidr .` : this does not mean that the files are saved in the same directory. As NextFlow saves files in their own subfolder eg `work/ax/dfjkfsn.../`, the `.` only tells NextFlow to pick up the same directory where you saved it.
+
+____
+
+
+
 ## STACK
 
-python, polars, pandas, pyarrow, requests
+- python: polars, pandas, pyarrow, requests
+- NextFlow: DSL2, Docker, nextflow.config, main.nf
