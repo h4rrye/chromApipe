@@ -44,6 +44,10 @@ Think of it as a network.
 
 `--outidr .` : this does not mean that the files are saved in the same directory. As NextFlow saves files in their own subfolder eg `work/ax/dfjkfsn.../`, the `.` only tells NextFlow to pick up the same directory where you saved it.
 
+___
+
+> `git rm -r <file_name>` removes tracking for a file, useful when you want to delete a file from the git repo but keep it locally.
+
 ____
 
 <b> TODO:</b>
