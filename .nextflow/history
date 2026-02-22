@@ -1,6 +1,0 @@
-2026-02-22 15:21:27	-	sick_kay	-	ddf83400edb8da0ea170a854409f9502	60df7bd2-73e0-474b-8b0a-9841771cb97c	nextflow run main.nf --chromosome 21
-2026-02-22 15:24:45	1.2s	agitated_watson	ERR	7e18d5da5655df6719ea63bc86cd7aea	efaba065-88fc-41a6-9bcc-91d9aeb8872e	nextflow run main.nf --chromosome 21
-2026-02-22 15:26:32	-	determined_woese	-	507b2981df9c7d8b1631e7333e6b7fc2	5af173bd-9d3e-462f-b589-fd7474911515	nextflow run main.nf --chromosomes 21
-2026-02-22 15:27:35	-	chaotic_colden	-	2db5094c9c3841178e2770f271463ab4	4031a48d-5846-4c84-8faf-4d638a52cfd2	nextflow run main.nf --chromosomes 21
-2026-02-22 15:27:58	3m 47s	furious_pauling	ERR	15906b0e4338e5c5ba708b7f030b0ad2	61b4fb6a-dbc9-4000-bd28-3c5d5c9cf273	nextflow run main.nf --chromosomes 21
-2026-02-22 15:33:37	924ms	disturbed_wiles	OK	4aa9c9c7046664292b7b45dd615184ae	61b4fb6a-dbc9-4000-bd28-3c5d5c9cf273	nextflow run main.nf --chromosomes 21 -resume
