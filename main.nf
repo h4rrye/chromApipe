@@ -1,4 +1,6 @@
-nextflow.enable.dsl2
+// uncomment this following line if using older version of nextflow
+// < 22.03.0-edge or 22.04.0 stable release
+// nextflow.enable.dsl2
 
 // params are the cmd line args
 params.chromosomes = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22"
@@ -56,12 +58,12 @@ process compile {
 
     script:
     """
-    python ${projectDir}/bin/complile.py --chr ${chr_num} --physical ${physical} --surface ${surface} --annotations ${annotations} --outdir .
+    python ${projectDir}/bin/compile.py --chr ${chr_num} --physical ${physical} --surface ${surface} --annotations ${annotations} --outdir .
     """
 }
 
 workflow {
-    chr_list = Channel.of(params.chromosomes.tokenize(','))
+    chr_list = Channel.fromList("${params.chromosomes}".tokenize(','))
 
     fetch_pdb(chr_list)
     compute_physical(fetch_pdb.out)
