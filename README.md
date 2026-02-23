@@ -1,4 +1,4 @@
-# ChromApipe
+# chromApipe
 
 A fully automated, containerized Nextflow pipeline that compares the physical properties of 3D chromosome organization to biological features like gene expression, chromatin openness, and GC content. Outputs analysis-ready Parquet files per chromosome for downstream exploration.
 
