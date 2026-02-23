@@ -10,7 +10,7 @@
 
   <!-- Add your HTML diagram here -->
 
-  ![chromapipe_architecture](/Users/harry/Documents/coding_projects/chromApipe/docs/img/chromapipe_architecture.svg)
+  <image-card alt="ChromApipe Architecture" src="./docs/img/chromapipe_architecture.svg" ></image-card>
 
   ## Data Source
 
