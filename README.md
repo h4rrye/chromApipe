@@ -4,9 +4,9 @@ A fully automated, containerized Nextflow pipeline that compares the physical pr
 
 ## About
 
-3D genome organization plays a crucial role in normal cell development and functioning — irregularities can cause massive downstream repercussions like developmental diseases and cancer. In the hopes of deciphering how 3D organization dictates cell functionality, this pipeline pulls genomic annotation data directly via REST API endpoints while deriving physical attributes in parallel.
+3D genome organization plays a crucial role in normal cell development and functioning - irregularities can cause massive downstream repercussions like developmental diseases and cancer. In the hopes of deciphering how 3D organization dictates cell functionality, this pipeline pulls genomic annotation data directly via REST API endpoints while deriving physical attributes in parallel.
 
-ChromApipe also implements the novel Chromosome Accessible Surface Area (CSAA) algorithm from [genBrowser](https://github.com/h4rrye/genBrowser), which constructs a surface around the chromosome to calculate open regions of the genome — a proxy for how accessible genes are to transcription factors and transcription machinery.
+ChromApipe also implements the novel Chromosome Accessible Surface Area (CSAA) algorithm from [genBrowser](https://github.com/h4rrye/genBrowser), which constructs a surface around the chromosome to calculate open regions of the genome - a proxy for how accessible genes are to transcription factors and transcription machinery.
 
 ## Pipeline Architecture
 
