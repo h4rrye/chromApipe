@@ -10,7 +10,7 @@
 
   <!-- Add your HTML diagram here -->
 
-  ![chromapipe_architecture](docs/img/chromapipe_architecture.svg)
+  [![chromapipe_architecture](docs/img/chromapipe_architecture.png)](docs/img/chromapipe_architecture.png)
 
   ## Data Source
 
