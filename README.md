@@ -10,6 +10,8 @@
 
   <!-- Add your HTML diagram here -->
 
+  ![chromapipe_architecture](/Users/harry/Documents/coding_projects/chromApipe/docs/img/chromapipe_architecture.svg)
+
   ## Data Source
 
   Chromosome 3D structures are sourced from the [Genome Structure Database (GSDB)](https://gsdb.mu.hekademeia.org/) using the GSE105544_ENCFF010WBP dataset. Structures were reconstructed from Hi-C data using the 3DMax algorithm at 500kb resolution for the H1-hESC cell line. Biological annotations are fetched from the [Ensembl REST API](https://rest.ensembl.org/).
@@ -19,7 +21,7 @@
   Each chromosome produces two parquet files:
 
   **chr{N}_compiled.parquet** — one row per genomic bin (500kb), containing:
-
+  
   - `x`, `y`, `z` — 3D bead coordinates
   - `dist_surface` — distance from chromosome surface (CSAA)
   - `dist_com` — distance from center of mass
@@ -31,7 +33,7 @@
   **chr{N}_surface.parquet** — 3D coordinates of the constructed chromosome surface points.
 
   ## Usage
-
+  
   ```bash
   # Run on all 22 autosomes
   nextflow run main.nf
@@ -47,7 +49,7 @@
   ```
 
   ## Future Scope
-
+  
   - Gene expression integration (H1-hESC RNA-seq from ENCODE)
   - Histone modification and replication timing annotations
   - Network analysis using NetworkX for chromatin interaction topology
@@ -55,7 +57,7 @@
   - nf-core compatibility for community contribution
 
   ## Stack
-
+  
   - **Python**: polars, pandas, numpy, pyarrow, mdtraj, scipy, requests
   - **Nextflow**: DSL2, channel-based parallelism
   - **Docker**: containerized execution
