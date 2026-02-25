@@ -58,6 +58,13 @@ ___
 
 
 
+## Cloud runtime
+
+- use `SDKMAN!` that is the preferred bioinformatics way
+- use `Amazon Corretto` made for aws workflows
+
+> these 2 steps takes care of most of the workload
+
 ## STACK
 
 - python: polars, pandas, pyarrow, requests

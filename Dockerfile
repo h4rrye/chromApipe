@@ -8,6 +8,7 @@ RUN pip install --no-cache-dir \
     mdtraj \
     scipy \
     requests \
-    tqdm
+    tqdm \
+    awscli
 
 WORKDIR /work
