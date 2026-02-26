@@ -10,7 +10,7 @@ ChromApipe also implements the novel Chromosome Accessible Surface Area (CSAA) a
 
 ## Pipeline Architecture
 
-[![chromapipe_architecture](docs/img/chromapipe_architecture.png)](https://claude.ai/chat/docs/img/chromapipe_architecture.png)
+[![chromapipe_architecture](docs/img/chromapipe_architecture.png)](docs/img/chromapipe_architecture.png)
 
 ## Data Source
 

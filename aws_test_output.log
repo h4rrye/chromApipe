@@ -1,0 +1,6 @@
+
+[1m[38;5;232m[48;5;43m N E X T F L O W [0;2m  ~  [mversion 25.10.4[m
+[K
+Launching[35m `main.nf` [0;2m[[0;1;36mastonishing_stone[0;2m] DSL2 - [36mrevision: [0;36m4aa9c9c704[m
+[K
+When using `awsbatch` executor an S3 bucket must be provided as working directory using either the `-bucket-dir` or `-work-dir` command line option -- Check script 'main.nf' at line: 68 or see '.nextflow.log' file for more details

@@ -1,0 +1,109 @@
+
+[1m[38;5;232m[48;5;43m N E X T F L O W [0;2m  ~  [mversion 25.10.4[m
+[K
+Launching[35m `main.nf` [0;2m[[0;1;36mtender_jang[0;2m] DSL2 - [36mrevision: [0;36m4aa9c9c704[m
+[K
+[2m[[0;34m-        [0;2m] [0;2m[mfetch_pdb         -[K
+[2m[[0;34m-        [0;2m] [0;2m[mcompute_physical  -[K
+[2m[[0;34m-        [0;2m] [0;2m[mfetch_annotations -[K
+[4A
+[2mexecutor >  local (2)[m[K
+[2m[[0;34m25/a52183[0;2m] [0;2m[mfetch_pdb[33;2m ([0;33m1[2m)[m        [2m |[m 0 of 1[K
+[2m[[0;34m-        [0;2m] [0;2m[mcompute_physical      -[K
+[2m[[0;34md0/d0ef5b[0;2m] [0;2m[mfetch_annotations[33;2m ([0;33m1[2m)[m[2m |[m 0 of 1[K
+[2m[[0;34m-        [0;2m] [0;2m[mcompile               -[K
+[6A
+[2mexecutor >  local (3)[m[K
+[2m[[0;34m25/a52183[0;2m] [0;2m[mfetch_pdb[33;2m ([0;33m1[2m)[m        [2m |[m 1 of 1[32m ✔[m[K
+[2m[[0;34mf2/0df0e9[0;2m] [0;2m[mcompute_physical[33;2m ([0;33m1[2m)[m [2m |[m 0 of 1[K
+[2m[[0;34md0/d0ef5b[0;2m] [0;2m[mfetch_annotations[33;2m ([0;33m1[2m)[m[2m |[m 0 of 1[K
+[2m[[0;34m-        [0;2m] [0;2m[mcompile               -[K
+[6A
+[2mexecutor >  local (3)[m[K
+[2m[[0;34m25/a52183[0;2m] [0;2m[mfetch_pdb[33;2m ([0;33m1[2m)[m        [2m |[m 1 of 1[32m ✔[m[K
+[2m[[0;34mf2/0df0e9[0;2m] [0;2m[mcompute_physical[33;2m ([0;33m1[2m)[m [2m |[m 1 of 1[32m ✔[m[K
+[2m[[0;34md0/d0ef5b[0;2m] [0;2m[mfetch_annotations[33;2m ([0;33m1[2m)[m[2m |[m 0 of 1[K
+[2m[[0;34m-        [0;2m] [0;2m[mcompile               -[K
+[6A
+[2mexecutor >  local (4)[m[K
+[2m[[0;34m25/a52183[0;2m] [0;2m[mfetch_pdb[33;2m ([0;33m1[2m)[m        [2m |[m 1 of 1[32m ✔[m[K
+[2m[[0;34mf2/0df0e9[0;2m] [0;2m[mcompute_physical[33;2m ([0;33m1[2m)[m [2m |[m 1 of 1[32m ✔[m[K
+[2m[[0;34md0/d0ef5b[0;2m] [0;2m[mfetch_annotations[33;2m ([0;33m1[2m)[m[2m |[m 1 of 1[32m ✔[m[K
+[2m[[0;34m62/2cc223[0;2m] [0;2m[mcompile[33;2m ([0;33m1[2m)[m          [2m |[m 0 of 1[K
+[6A
+[2mexecutor >  local (4)[m[K
+[2m[[0;34m25/a52183[0;2m] [0;2m[mfetch_pdb[33;2m ([0;33m1[2m)[m        [2m |[m 1 of 1[32m ✔[m[K
+[2m[[0;34mf2/0df0e9[0;2m] [0;2m[mcompute_physical[33;2m ([0;33m1[2m)[m [2m |[m 1 of 1[32m ✔[m[K
+[2m[[0;34md0/d0ef5b[0;2m] [0;2m[mfetch_annotations[33;2m ([0;33m1[2m)[m[2m |[m 1 of 1[32m ✔[m[K
+[2m[[0;34m62/2cc223[0;2m] [0;2m[mcompile[33;2m ([0;33m1[2m)[m          [2m |[m 0 of 1[K
+[6A
+[2mexecutor >  local (4)[m[K
+[2m[[0;34m25/a52183[0;2m] [0;2m[mfetch_pdb[33;2m ([0;33m1[2m)[m        [2m |[m 1 of 1[32m ✔[m[K
+[2m[[0;34mf2/0df0e9[0;2m] [0;2m[mcompute_physical[33;2m ([0;33m1[2m)[m [2m |[m 1 of 1[32m ✔[m[K
+[2m[[0;34md0/d0ef5b[0;2m] [0;2m[mfetch_annotations[33;2m ([0;33m1[2m)[m[2m |[m 1 of 1[32m ✔[m[K
+[2m[[0;34m62/2cc223[0;2m] [0;2m[mcompile[33;2m ([0;33m1[2m)[m          [2m |[m 0 of 1[K
+[31mERROR ~ Error executing process > 'compile (1)'[K
+[K
+Caused by:[K
+  Process `compile (1)` terminated with an error exit status (139)[K
+[K
+[K
+Command executed:[K
+[K
+  python /Users/harry/Documents/coding_projects/chromApipe/bin/compile.py --chr 21 --physical chr21_physical.csv --surface chr21_surface.csv --annotations chr21_annotations.csv --outdir .[K
+[K
+Command exit status:[K
+  139[K
+[K
+Command output:[K
+  (empty)[K
+[K
+Command error:[K
+  WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested[K
+  .command.sh: line 2:     7 Segmentation fault      python /Users/harry/Documents/coding_projects/chromApipe/bin/compile.py --chr 21 --physical chr21_physical.csv --surface chr21_surface.csv --annotations chr21_annotations.csv --outdir .[K
+[K
+Work dir:[K
+  /Users/harry/Documents/coding_projects/chromApipe/work/62/2cc223b0b5c179c3372d0737bbc9b2[K
+[K
+Container:[K
+  chromapipe:latest[K
+[K
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`[K
+[K
+ -- Check '.nextflow.log' file for details[39m[K
+[35A
+[2mexecutor >  local (4)[m[K
+[2m[[0;34m25/a52183[0;2m] [0;2m[mfetch_pdb[33;2m ([0;33m1[2m)[m        [2m |[m 1 of 1[32m ✔[m[K
+[2m[[0;34mf2/0df0e9[0;2m] [0;2m[mcompute_physical[33;2m ([0;33m1[2m)[m [2m |[m 1 of 1[32m ✔[m[K
+[2m[[0;34md0/d0ef5b[0;2m] [0;2m[mfetch_annotations[33;2m ([0;33m1[2m)[m[2m |[m 1 of 1[32m ✔[m[K
+[2m[[0;34m62/2cc223[0;2m] [0;2m[mcompile[33;2m ([0;33m1[2m)[m          [2m |[m 0 of 1[31m ✘[m[K
+[31mERROR ~ Error executing process > 'compile (1)'[K
+[K
+Caused by:[K
+  Process `compile (1)` terminated with an error exit status (139)[K
+[K
+[K
+Command executed:[K
+[K
+  python /Users/harry/Documents/coding_projects/chromApipe/bin/compile.py --chr 21 --physical chr21_physical.csv --surface chr21_surface.csv --annotations chr21_annotations.csv --outdir .[K
+[K
+Command exit status:[K
+  139[K
+[K
+Command output:[K
+  (empty)[K
+[K
+Command error:[K
+  WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested[K
+  .command.sh: line 2:     7 Segmentation fault      python /Users/harry/Documents/coding_projects/chromApipe/bin/compile.py --chr 21 --physical chr21_physical.csv --surface chr21_surface.csv --annotations chr21_annotations.csv --outdir .[K
+[K
+Work dir:[K
+  /Users/harry/Documents/coding_projects/chromApipe/work/62/2cc223b0b5c179c3372d0737bbc9b2[K
+[K
+Container:[K
+  chromapipe:latest[K
+[K
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`[K
+[K
+ -- Check '.nextflow.log' file for details[39m[K
+
