@@ -1,0 +1,250 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 680" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-auto">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-auto">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-auto">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#34d399"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-auto">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#a78bfa"/>
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-auto">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#fb923c"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-auto">
+      <path d="M 0 0 L 10 3.5 L 0 7 z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1060" height="680" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="530" y="38" text-anchor="middle" fill="#f1f5f9" font-size="18" font-weight="600" letter-spacing="0.5">ChromApipe — Pipeline Architecture</text>
+  <text x="530" y="56" text-anchor="middle" fill="#64748b" font-size="11">Nextflow DSL2  ·  Docker  ·  AWS Batch  ·  S3  ·  ECR  ·  Wave + Fusion</text>
+
+  <!-- ═══════════════ INPUTS ═══════════════ -->
+  <rect x="30" y="90" width="120" height="70" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+  <text x="90" y="110" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" letter-spacing="1">INPUT</text>
+  <line x1="46" y1="118" x2="134" y2="118" stroke="#334155" stroke-width="0.8"/>
+  <text x="90" y="134" text-anchor="middle" fill="#e2e8f0" font-size="10" font-weight="500">chr 1–22</text>
+  <text x="90" y="150" text-anchor="middle" fill="#475569" font-size="8">PDB · GSDB 3DMax</text>
+
+  <rect x="30" y="175" width="120" height="50" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+  <text x="90" y="197" text-anchor="middle" fill="#e2e8f0" font-size="9" font-weight="500">mapping.txt</text>
+  <text x="90" y="213" text-anchor="middle" fill="#475569" font-size="8">chr → genomic coords</text>
+
+  <!-- ═══════════════ PIPELINE STAGES ═══════════════ -->
+
+  <!-- Stage 1: fetch_pdb -->
+  <rect x="190" y="90" width="155" height="65" rx="8" fill="#0c2d48" stroke="#38bdf8" stroke-width="1.2"/>
+  <circle cx="208" cy="108" r="8" fill="#38bdf8" opacity="0.2"/>
+  <text x="208" y="112" text-anchor="middle" fill="#38bdf8" font-size="9" font-weight="700">1</text>
+  <text x="275" y="112" text-anchor="middle" fill="#38bdf8" font-size="11" font-weight="600">fetch_pdb</text>
+  <line x1="208" y1="120" x2="328" y2="120" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="268" y="138" text-anchor="middle" fill="#cbd5e1" font-size="8.5">GitHub releases download</text>
+  <text x="268" y="150" text-anchor="middle" fill="#64748b" font-size="7.5">GSDB · 500kb · H1-hESC</text>
+
+  <!-- Stage 2: compute_physical -->
+  <rect x="190" y="180" width="155" height="80" rx="8" fill="#0a2e1f" stroke="#34d399" stroke-width="1.2"/>
+  <circle cx="208" cy="198" r="8" fill="#34d399" opacity="0.2"/>
+  <text x="208" y="202" text-anchor="middle" fill="#34d399" font-size="9" font-weight="700">2</text>
+  <text x="285" y="202" text-anchor="middle" fill="#34d399" font-size="10" font-weight="600">compute_physical</text>
+  <line x1="208" y1="210" x2="328" y2="210" stroke="#1a3d2e" stroke-width="0.8"/>
+  <text x="268" y="226" text-anchor="middle" fill="#cbd5e1" font-size="8.5">CSAA · COM · rolling mean</text>
+  <text x="268" y="240" text-anchor="middle" fill="#64748b" font-size="7.5">surface construction · distances</text>
+  <rect x="270" y="248" width="60" height="10" rx="3" fill="#34d399" opacity="0.15" stroke="#34d399" stroke-width="0.5"/>
+  <text x="300" y="256" text-anchor="middle" fill="#34d399" font-size="6" font-weight="600">PARALLEL</text>
+
+  <!-- Stage 3: fetch_annotations -->
+  <rect x="190" y="280" width="155" height="80" rx="8" fill="#1e1640" stroke="#a78bfa" stroke-width="1.2"/>
+  <circle cx="208" cy="298" r="8" fill="#a78bfa" opacity="0.2"/>
+  <text x="208" y="302" text-anchor="middle" fill="#a78bfa" font-size="9" font-weight="700">3</text>
+  <text x="285" y="302" text-anchor="middle" fill="#a78bfa" font-size="10" font-weight="600">fetch_annotations</text>
+  <line x1="208" y1="310" x2="328" y2="310" stroke="#2d2060" stroke-width="0.8"/>
+  <text x="268" y="326" text-anchor="middle" fill="#cbd5e1" font-size="8.5">Ensembl REST API</text>
+  <text x="268" y="340" text-anchor="middle" fill="#64748b" font-size="7.5">GC content · gene density</text>
+  <rect x="270" y="348" width="60" height="10" rx="3" fill="#a78bfa" opacity="0.15" stroke="#a78bfa" stroke-width="0.5"/>
+  <text x="300" y="356" text-anchor="middle" fill="#a78bfa" font-size="6" font-weight="600">PARALLEL</text>
+
+  <!-- Stage 4: compile -->
+  <rect x="190" y="385" width="155" height="65" rx="8" fill="#2d2408" stroke="#fbbf24" stroke-width="1.2"/>
+  <circle cx="208" cy="403" r="8" fill="#fbbf24" opacity="0.2"/>
+  <text x="208" y="407" text-anchor="middle" fill="#fbbf24" font-size="9" font-weight="700">4</text>
+  <text x="275" y="407" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="600">compile</text>
+  <line x1="208" y1="415" x2="328" y2="415" stroke="#3d3010" stroke-width="0.8"/>
+  <text x="268" y="432" text-anchor="middle" fill="#cbd5e1" font-size="8.5">Polars merge · schema enforce</text>
+  <text x="268" y="444" text-anchor="middle" fill="#64748b" font-size="7.5">Float32 · 4 decimal rounding</text>
+
+  <!-- Input arrows -->
+  <line x1="150" y1="120" x2="188" y2="118" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="150" y1="200" x2="188" y2="315" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- Pipeline flow arrows -->
+  <line x1="268" y1="155" x2="268" y2="178" stroke="#38bdf8" stroke-width="1.2" marker-end="url(#arrow-blue)"/>
+  <line x1="268" y1="260" x2="268" y2="278" stroke="#34d399" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="268" y1="360" x2="268" y2="383" stroke="#a78bfa" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Join badge -->
+  <rect x="245" y="370" width="46" height="14" rx="7" fill="#1e293b" stroke="#475569" stroke-width="0.8"/>
+  <text x="268" y="380" text-anchor="middle" fill="#94a3b8" font-size="7" font-weight="600">JOIN</text>
+
+  <!-- ═══════════════ EXECUTION SPLIT ═══════════════ -->
+  <text x="495" y="90" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600" letter-spacing="1">EXECUTION</text>
+
+  <!-- Nextflow orchestrator box -->
+  <rect x="385" y="160" width="130" height="50" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="450" y="182" text-anchor="middle" fill="#38bdf8" font-size="10" font-weight="600">Nextflow</text>
+  <text x="450" y="196" text-anchor="middle" fill="#475569" font-size="8">DSL2 orchestrator</text>
+
+  <!-- Arrow from pipeline to nextflow -->
+  <line x1="345" y1="200" x2="383" y2="190" stroke="#64748b" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- LOCAL PATH -->
+  <rect x="385" y="240" width="130" height="85" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="450" y="260" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" letter-spacing="0.5">LOCAL</text>
+  <line x1="400" y1="268" x2="500" y2="268" stroke="#334155" stroke-width="0.6"/>
+  <text x="450" y="284" text-anchor="middle" fill="#64748b" font-size="8">Docker Engine</text>
+  <text x="450" y="298" text-anchor="middle" fill="#64748b" font-size="8">chromapipe:latest</text>
+  <text x="450" y="316" text-anchor="middle" fill="#475569" font-size="7">-profile standard</text>
+
+  <!-- Local output -->
+  <rect x="400" y="340" width="100" height="30" rx="6" fill="#172130" stroke="#253549"/>
+  <text x="450" y="360" text-anchor="middle" fill="#94a3b8" font-size="8">results/*.parquet</text>
+
+  <!-- Arrow nextflow → local -->
+  <line x1="450" y1="210" x2="450" y2="238" stroke="#475569" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="450" y1="325" x2="450" y2="338" stroke="#475569" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- ═══════════════ AWS CLOUD ═══════════════ -->
+  <rect x="555" y="105" width="475" height="420" rx="10" fill="#0f1729" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="792" y="126" text-anchor="middle" fill="#fb923c" font-size="12" font-weight="700" letter-spacing="1">AWS CLOUD</text>
+  <text x="792" y="140" text-anchor="middle" fill="#64748b" font-size="8">-profile aws  ·  us-west-2</text>
+
+  <!-- Arrow nextflow → AWS -->
+  <line x1="515" y1="185" x2="553" y2="185" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+
+  <!-- IAM -->
+  <rect x="575" y="155" width="125" height="60" rx="7" fill="#1a1028" stroke="#c084fc" stroke-width="1"/>
+  <text x="637" y="174" text-anchor="middle" fill="#c084fc" font-size="10" font-weight="600">IAM</text>
+  <line x1="590" y1="181" x2="685" y2="181" stroke="#2d1a50" stroke-width="0.6"/>
+  <text x="637" y="196" text-anchor="middle" fill="#94a3b8" font-size="7.5">nextflow-user</text>
+  <text x="637" y="208" text-anchor="middle" fill="#64748b" font-size="7">S3 · ECR · Batch · EC2</text>
+
+  <!-- ECR -->
+  <rect x="720" y="155" width="125" height="60" rx="7" fill="#0c2d48" stroke="#38bdf8" stroke-width="1"/>
+  <text x="782" y="174" text-anchor="middle" fill="#38bdf8" font-size="10" font-weight="600">ECR</text>
+  <line x1="735" y1="181" x2="830" y2="181" stroke="#1e3a5f" stroke-width="0.6"/>
+  <text x="782" y="196" text-anchor="middle" fill="#94a3b8" font-size="7.5">chromapipe:latest</text>
+  <text x="782" y="208" text-anchor="middle" fill="#64748b" font-size="7">container registry</text>
+
+  <!-- Wave + Fusion -->
+  <rect x="865" y="155" width="145" height="60" rx="7" fill="#082d1a" stroke="#34d399" stroke-width="1"/>
+  <text x="937" y="174" text-anchor="middle" fill="#34d399" font-size="10" font-weight="600">Wave + Fusion</text>
+  <line x1="880" y1="181" x2="995" y2="181" stroke="#0f3d2a" stroke-width="0.6"/>
+  <text x="937" y="196" text-anchor="middle" fill="#94a3b8" font-size="7.5">auto container mgmt</text>
+  <text x="937" y="208" text-anchor="middle" fill="#64748b" font-size="7">POSIX S3 access · no staging</text>
+
+  <!-- AWS Batch -->
+  <rect x="575" y="235" width="435" height="130" rx="8" fill="#1a1508" stroke="#fbbf24" stroke-width="1.2"/>
+  <text x="792" y="256" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="600">AWS Batch</text>
+  <line x1="590" y1="264" x2="995" y2="264" stroke="#3d3010" stroke-width="0.6"/>
+
+  <!-- Compute Environment -->
+  <rect x="590" y="275" width="195" height="75" rx="6" fill="#172130" stroke="#253549"/>
+  <text x="687" y="294" text-anchor="middle" fill="#e2e8f0" font-size="9" font-weight="500">Compute Environment</text>
+  <text x="687" y="310" text-anchor="middle" fill="#64748b" font-size="7.5">EC2 On-Demand · optimal instances</text>
+  <text x="687" y="324" text-anchor="middle" fill="#64748b" font-size="7.5">min 0 · max 4 vCPUs</text>
+  <text x="687" y="338" text-anchor="middle" fill="#64748b" font-size="7.5">ecsInstanceRole · auto-scaling</text>
+
+  <!-- Job Queue -->
+  <rect x="800" y="275" width="195" height="75" rx="6" fill="#172130" stroke="#253549"/>
+  <text x="897" y="294" text-anchor="middle" fill="#e2e8f0" font-size="9" font-weight="500">Job Queue</text>
+  <text x="897" y="310" text-anchor="middle" fill="#64748b" font-size="7.5">chromapipe-queue</text>
+  <text x="897" y="324" text-anchor="middle" fill="#64748b" font-size="7.5">priority 1</text>
+  <text x="897" y="338" text-anchor="middle" fill="#64748b" font-size="7.5">4 parallel jobs per run</text>
+
+  <!-- S3 -->
+  <rect x="575" y="385" width="270" height="65" rx="7" fill="#2d1a08" stroke="#fb923c" stroke-width="1"/>
+  <text x="710" y="404" text-anchor="middle" fill="#fb923c" font-size="10" font-weight="600">Amazon S3</text>
+  <line x1="590" y1="412" x2="830" y2="412" stroke="#3d2510" stroke-width="0.6"/>
+  <text x="645" y="428" text-anchor="middle" fill="#94a3b8" font-size="8">s3://chromapipe-data/</text>
+  <rect x="590" y="434" width="70" height="12" rx="3" fill="#3d2510"/>
+  <text x="625" y="443" text-anchor="middle" fill="#fbd38d" font-size="7">data/</text>
+  <rect x="668" y="434" width="70" height="12" rx="3" fill="#3d2510"/>
+  <text x="703" y="443" text-anchor="middle" fill="#fbd38d" font-size="7">work/</text>
+  <rect x="746" y="434" width="70" height="12" rx="3" fill="#3d2510"/>
+  <text x="781" y="443" text-anchor="middle" fill="#fbd38d" font-size="7">results/</text>
+
+  <!-- CloudWatch -->
+  <rect x="865" y="385" width="145" height="65" rx="7" fill="#172130" stroke="#475569" stroke-width="1"/>
+  <text x="937" y="404" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600">CloudWatch</text>
+  <line x1="880" y1="412" x2="995" y2="412" stroke="#334155" stroke-width="0.6"/>
+  <text x="937" y="428" text-anchor="middle" fill="#64748b" font-size="8">/aws/batch/job</text>
+  <text x="937" y="442" text-anchor="middle" fill="#64748b" font-size="7">execution logs</text>
+
+  <!-- Arrows within AWS -->
+  <line x1="792" y1="365" x2="792" y2="383" stroke="#fbbf24" stroke-width="1" marker-end="url(#arrow-amber)"/>
+  <line x1="937" y1="365" x2="937" y2="383" stroke="#475569" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- ═══════════════ OUTPUT ═══════════════ -->
+  <rect x="575" y="470" width="270" height="45" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+  <text x="710" y="490" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" letter-spacing="1">OUTPUT</text>
+  <text x="710" y="506" text-anchor="middle" fill="#34d399" font-size="9">chr{N}_compiled.parquet · chr{N}_surface.parquet</text>
+
+  <!-- Arrow S3 → output -->
+  <line x1="710" y1="450" x2="710" y2="468" stroke="#fb923c" stroke-width="1.2" marker-end="url(#arrow-orange)"/>
+
+  <!-- ═══════════════ BOTTOM BAR ═══════════════ -->
+  <rect x="30" y="540" width="1000" height="50" rx="8" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+  <text x="530" y="560" text-anchor="middle" fill="#64748b" font-size="9" font-weight="600" letter-spacing="1.5">STACK</text>
+
+  <rect x="50" y="568" width="90" height="16" rx="4" fill="#172130" stroke="#253549"/>
+  <text x="95" y="579" text-anchor="middle" fill="#94a3b8" font-size="7.5">GSDB 3DMax</text>
+
+  <rect x="152" y="568" width="90" height="16" rx="4" fill="#172130" stroke="#253549"/>
+  <text x="197" y="579" text-anchor="middle" fill="#94a3b8" font-size="7.5">Ensembl REST</text>
+
+  <rect x="254" y="568" width="110" height="16" rx="4" fill="#172130" stroke="#253549"/>
+  <text x="309" y="579" text-anchor="middle" fill="#94a3b8" font-size="7.5">Python 3.11 · Polars</text>
+
+  <rect x="376" y="568" width="110" height="16" rx="4" fill="#172130" stroke="#253549"/>
+  <text x="431" y="579" text-anchor="middle" fill="#94a3b8" font-size="7.5">NumPy · SciPy · mdtraj</text>
+
+  <rect x="498" y="568" width="80" height="16" rx="4" fill="#172130" stroke="#253549"/>
+  <text x="538" y="579" text-anchor="middle" fill="#94a3b8" font-size="7.5">Docker</text>
+
+  <rect x="590" y="568" width="100" height="16" rx="4" fill="#172130" stroke="#253549"/>
+  <text x="640" y="579" text-anchor="middle" fill="#94a3b8" font-size="7.5">Nextflow DSL2</text>
+
+  <rect x="702" y="568" width="100" height="16" rx="4" fill="#172130" stroke="#253549"/>
+  <text x="752" y="579" text-anchor="middle" fill="#94a3b8" font-size="7.5">AWS Batch · S3</text>
+
+  <rect x="814" y="568" width="80" height="16" rx="4" fill="#172130" stroke="#253549"/>
+  <text x="854" y="579" text-anchor="middle" fill="#94a3b8" font-size="7.5">ECR · IAM</text>
+
+  <rect x="906" y="568" width="110" height="16" rx="4" fill="#172130" stroke="#253549"/>
+  <text x="961" y="579" text-anchor="middle" fill="#94a3b8" font-size="7.5">Wave · Fusion</text>
+
+  <!-- ═══════════════ PERFORMANCE BAR ═══════════════ -->
+  <rect x="30" y="605" width="1000" height="55" rx="8" fill="#1e293b" stroke="#334155" stroke-width="0.8"/>
+  <text x="530" y="625" text-anchor="middle" fill="#64748b" font-size="9" font-weight="600" letter-spacing="1.5">PERFORMANCE</text>
+
+  <rect x="150" y="635" width="160" height="18" rx="4" fill="#172130" stroke="#253549"/>
+  <text x="230" y="647" text-anchor="middle" fill="#475569" font-size="8">Local · chr21 · ~15-20 min</text>
+
+  <rect x="450" y="635" width="200" height="18" rx="4" fill="#2d1a08" stroke="#fb923c" stroke-width="0.8"/>
+  <text x="550" y="647" text-anchor="middle" fill="#fbd38d" font-size="8">AWS Batch · chr21 · ~8-9 min</text>
+
+  <rect x="700" y="635" width="220" height="18" rx="4" fill="#2d1a08" stroke="#fb923c" stroke-width="0.8"/>
+  <text x="810" y="647" text-anchor="middle" fill="#fbd38d" font-size="8">AWS Batch · all 22 · ~15-20 min ∥</text>
+
+</svg>
