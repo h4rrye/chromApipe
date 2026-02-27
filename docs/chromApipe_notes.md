@@ -65,6 +65,24 @@ ___
 
 > these 2 steps takes care of most of the workload
 
+___
+
+## Wave Containers & Fusion File System
+
+<b>Wave Container</b>: ephimeral containers; instead of manually creating the docker/singulairty conteiners, we let our workflow create the temporary container in accordance with the required pipeline. Wave dynamically builds and caches a container for that exact environment.
+
+<b> Fusion File Sytmem </b>: is a virtual distributed file system that mounts remote object storage (S3, blob, GCS, etc) as a POSIX filesystems with a HPC wrokflows. Instead of downloading the S3 bucket contents, this creates a virtual mounted disks which can be accessed directly via the terminal while running the codes.
+
+
+
+
+
+
+
+___
+
+
+
 ## STACK
 
 - python: polars, pandas, pyarrow, requests

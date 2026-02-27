@@ -3,5 +3,6 @@ results/
 work/
 .nextflow/
 .nextflow.log
-.DS_Store
 .nextflow.log.*
+.DS_Store
+.kiro/

@@ -1,22 +1,25 @@
-FROM python:3.11-slim
+FROM python:3.11
 
-# System deps: CA bundle for TLS + minimal tools some libs expect
+# Install system dependencies including build tools for mdtraj
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     curl \
+    procps \
+    gcc \
+    g++ \
+    make \
   && update-ca-certificates \
   && rm -rf /var/lib/apt/lists/*
 
-# Python deps
+# Install Python dependencies for chromApipe
 RUN pip install --no-cache-dir \
     pandas \
     numpy \
     polars \
     pyarrow \
-    mdtraj \
     scipy \
     requests \
     tqdm \
-    awscli
+    mdtraj
 
 WORKDIR /work
