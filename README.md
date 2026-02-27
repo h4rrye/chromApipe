@@ -12,7 +12,7 @@ ChromApipe implements the **Chromosome Accessible Surface Area (CSAA)** algorith
 
 ## Architecture
 
-[![chromapipe_architecture](docs/img/chromapipe_architecture_aws.png)](https://claude.ai/chat/docs/img/chromapipe_architecture.png)
+[![chromapipe_architecture](docs/img/chromapipe_architecture_aws.png)](https://github.com/h4rrye/chromApipe/blob/main/docs/img/chromapipe_architecture_aws.png)
 
 **Four pipeline stages run via Nextflow DSL2:**
 
